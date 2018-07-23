@@ -15,8 +15,7 @@ public class prompt {
 			year = sc.nextInt();
 			System.out.print("month: ");
 			month = sc.nextInt();
-			System.out.print("start: ");
-			weekday = cal.parseDay(sc.next());
+			weekday = cal.parseDay(cal.getWeekday(year, month));
 			if(month == -1) {break;}
 			if(month>12) {continue;}
 			cal.printCal(year, month, weekday);
