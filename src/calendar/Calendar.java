@@ -6,12 +6,12 @@ public class Calendar {
 	private static final int[] Space = {6,0,1,2,3,4,5};
 	private static final int[] Modday_of_Sa = {1,0,6,5,4,3,2};
 	
-	public boolean isLeap(int year) {
+	public boolean isLeap(int year) { //윤년
 		if (year % 4 == 0 && (year % 100 != 0 || year % 400 == 0)) {return true;}
 		else {return false;}
 	}
 	
-	public int parseDay(String weekday) {
+	public int parseDay(String weekday) {//요일→수
 		switch(weekday) {
 		case("Su"):
 			return 1;
@@ -55,7 +55,7 @@ public class Calendar {
 		}
 	}
 	
-	public void printCal(int year, int month, int weekday) {
+	public void printCal(int year, int month, int weekday) {//달력출력
 		int days = getMaxDays(year, month);
 		System.out.printf("    %4d년%3d월\n", year,month);
 		System.out.println("---------------------");
